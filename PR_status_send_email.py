@@ -11,7 +11,7 @@ repo = 'freecodecamp'
 auth_user = 'github_user_name'
 auth_access_token = 'github_access_token'
 
-response = requests.get('https://api.github.com/repos/{owner}/{repo}/pulls?q=+type:pr+sort=created&order=asc&state=all&page={page}', auth=({auth_user}, {auth_access_token}))
+response = requests.get('https://api.github.com/repos/freecodecamp/freecodecamp/pulls?q=+type:pr+sort=created&order=asc&state=all&page={page}', auth=({auth_user}, {auth_access_token}))
 list_pr=response.json()
 
 with open("output.json", 'w') as f:
